@@ -1,0 +1,32 @@
+<form id="login-form">
+	<fieldset>
+		<legend>
+			Login
+		</legend>
+		<label>
+			<span>Username *</span>
+			<input
+					type="text"
+					name="name"
+					title="Please enter your username"
+					required
+					autofocus
+					/>
+		</label>
+
+		<label>
+			<span>Passwort *</span>
+			<input
+					type="password"
+					name="password"
+					title="Please enter your password"
+					required
+					/>
+		</label>
+
+		<button type="submit" class="main-button">Login</button>
+		<p>Username: "Luke" Password: "Skywalker"</p>
+
+
+	</fieldset>
+</form>

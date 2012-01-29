@@ -1,0 +1,60 @@
+<ul id="sub-nav">
+	<li><a class="subButton bCancel">Cancel</a></li>
+</ul>
+<form>
+	<fieldset>
+		<legend>
+			New
+		</legend>
+		<label>
+			<span>First name:</span>
+			<input
+					type="text"
+					value="<%= @first_name %>"
+					name="first_name"
+					required
+					autofocus
+					/>
+		</label>
+		<label>
+			<span>Last name:</span>
+			<input
+					type="text"
+					value="<%= @last_name %>"
+					name="last_name"
+					required
+					/>
+		</label>
+
+
+		<label>
+			<span>Start date:</span>
+			<!--
+					RegEx for date format YYYY-MM-DD:
+					@see: http://www.regular-expressions.info/regexbuddy/datemmddyyyy.html
+			-->
+			<input
+					type="text"
+					value="<%= @start_date %>"
+					name="start_date"
+					pattern="(19|20)\d\d[-](0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01])"
+					title="Please enter a date formatting YYYY-MM-DD"
+					required
+					/>
+		</label>
+
+		<label><span>Email:</span>
+			<input
+					type="email"
+					value="<%= @email %>"
+					name="email"
+					required
+					/>
+		</label>
+
+		<div class="formFooter">
+			<button type="submit" class="main-button">Save</button>
+		</div>
+
+	</fieldset>
+</form>

@@ -10,4 +10,7 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def loginDefaultUser()
+    post sessions_path, :user => {:name => 'Luke', :password => 'Skywalker'}
+  end
 end

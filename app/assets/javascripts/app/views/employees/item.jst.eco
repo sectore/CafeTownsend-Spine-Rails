@@ -1,0 +1,5 @@
+<% for employee in @: %>
+<li class="item" data-item="<%= employee.id %>">
+	<%= employee.first_name %> <%= employee.last_name %>
+</li>
+<% end %>

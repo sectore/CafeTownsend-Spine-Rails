@@ -5,8 +5,6 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -14,14 +12,14 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'spine-rails'
-  gem 'eco'
 end
 
 gem 'jquery-rails'
 
+gem 'eco'
+
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -35,4 +33,17 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'minitest'
+end
+
+
+group :development, :test do
+  gem 'sqlite3'
+end
+# Switch from SQLite to PostgreSQL for deployment to Heroku
+# Also, Heroku is running Thin (not Webrick) as a webserver
+# http://railsapps.github.com/rails-heroku-tutorial.html
+group :production do
+  gem 'pg'
+  gem 'thin'
 end

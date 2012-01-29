@@ -1,0 +1,4 @@
+<div>
+	<p class="main-button">Logout</p>
+	<p id="greetings" />
+</div>

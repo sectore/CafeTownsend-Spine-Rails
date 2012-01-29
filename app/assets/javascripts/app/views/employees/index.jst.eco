@@ -1,0 +1,11 @@
+<ul id="sub-nav">
+	<li><a id="bAdd" class="subButton">Create</a></li>
+	<li><a id="bEdit" class="subButton">Edit</a></li>
+	<li><a id="bDelete" class="subButton">Delete</a></li>
+</ul>
+
+<div id="employee-list-container">
+	<ul id="employee-list">
+
+	</ul>
+</div>
